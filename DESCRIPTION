@@ -1,14 +1,28 @@
 Package: MapDfGenerator
-Title: What the Package Does (One Line, Title Case)
+Title: MapDfGenerator
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    c(person(given = "Yudi",
+           family = "Zhang",
+           role = c("aut"),
+           email = "yudiz@iastate.edu"),
+    person(given = "Zerui",
+           family = "Zhang",
            role = c("aut", "cre"),
-           email = "first.last@example.com")
-Description: What the package does (one paragraph).
-License: What license it uses
+           email = "xxxxx@iastate.edu")
+           )
+Description: Generate a dataframe containing location information.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/zeruiz/MapDfGenerator
 BugReports: https://github.com/zeruiz/MapDfGenerator/issues
+Suggests: 
+    testthat
+RoxygenNote: 6.1.1
+Imports: 
+    sf,
+    purrr,
+    dplyr,
+    checkmate,
+    maptools
