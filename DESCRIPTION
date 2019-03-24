@@ -33,4 +33,5 @@ Imports:
     purrr,
     dplyr,
     checkmate,
-    maptools
+    maptools,
+    tidyverse
