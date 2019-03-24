@@ -1,9 +1,10 @@
-#' Map dataframe generator form Team 12.
+#' This function helps get the polygon and geographic information from a shapefile.
 #'
+#' @description Extract polygon and geographic information from a shapefile. The main function is built on that from team 12's work from Lab 2
 #' @param file URL to local path to the shape data.
 #' @param tolerance A number.
 #' @export
-#' @return The dataframe of longitude, latitude, group and order.
+#' @return A dataframe, containing polygon and geographic information like longitude, latitude, group and order.
 #' @examples
 #' team_12("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
 
@@ -28,6 +29,13 @@ team_12 <- function(file, tolerance){
     return(d)
   }
 
+  if(!is.numeric(tolerance)){
+    warning('argument is not numeric or logical: returning NA')
+    return(NA)
+  }
+  checkmate::assertNumber(tolerance, lower = 0, upper = 1)
+  checkmate::assertCharacter(file)
+
   ozbig <- sf::read_sf(file)
   oz_st <- maptools::thinnedSpatialPoly(as(ozbig, "Spatial"), tolerance, minarea = 0.001, topologyPreserve = TRUE)
   oz <- sf::st_as_sf(oz_st)
@@ -35,5 +43,12 @@ team_12 <- function(file, tolerance){
   res <- add_layer(res)
   colnames(res) <- c('long','lat','order','group','geo')
   res <- as.data.frame(res)
-  list(dataframe = res, name = oz$NAME_0[1])
+
+  repnum <- table(res$geo)
+  dat <- cbind(data.frame(oz$GID_0, oz$NAME_0, oz$GID_1, oz$NAME_1, oz$TYPE_1, oz$ENGTYPE_1, oz$CC_1, oz$HASC_1))
+  dat %>% slice(rep(1:n(), times = repnum)) -> dat
+  cbind(dat, res) -> dat
+  return(dat)
+
+  checkmate::checkDataFrame(dat)
 }
