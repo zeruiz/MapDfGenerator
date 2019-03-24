@@ -8,14 +8,6 @@
 #' team_12("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
 
 
-#purrr::map(oz$geometry, .f=helper) -> res
-#res <- add_layer(res)
-#colnames(res) <- c('long','lat','order','group','geo')
-#res <- as.data.frame(res)
-#ozbig <- read_sf("./data/gadm36_AUS_shp/gadm36_AUS_1.shp")
-#oz_st <- maptools::thinnedSpatialPoly(as(ozbig, "Spatial"), tolerance = 0.1, minarea = 0.001, topologyPreserve = TRUE)
-#oz <- st_as_sf(oz_st)
-
 team_12 <- function(file, tolerance){
   library(tidyverse)
 
