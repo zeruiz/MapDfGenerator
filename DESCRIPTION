@@ -9,16 +9,15 @@ Authors@R:
     person(given = "Zerui",
            family = "Zhang",
            role = c("aut", "cre"),
-           email = "zeruiz@iastate.edu")
+           email = "zeruiz@iastate.edu"),
     person(given = "Atousa",
            family = "Zarindast",
            role = c("aut"),
-           email = "atousazarindast@gmail.com")
+           email = "atousazarindast@gmail.com"),
     person(given = "Ying",
            family = "Zheng",
            role = c("aut"),
            email = "zhy@iastate.edu")
-           
            )
 Description: Generate a dataframe containing location information.
 License: GPL-3
