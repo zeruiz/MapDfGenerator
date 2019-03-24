@@ -5,11 +5,11 @@
 #' @param path input file path usually as data/...
 #' @param tolerance the amount of which data is getting small
 #' @return a data frame consists of the geographic information of the polygons and the additional information (such as name of the country, name of the territory/state, ...)
-#'
 
+#' @export
+#' @examples
+#' shpBigToSmall("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
 
-
-Roxygen: list(markdown = TRUE)
 
 #' @details
 #' Three functions for geographic info
