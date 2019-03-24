@@ -12,11 +12,11 @@ Authors@R:
            email = "zeruiz@iastate.edu")
     person(given = "Atousa",
            family = "Zarindast",
-           role = c("aut", "cre"),
+           role = c("aut"),
            email = "atousazarindast@gmail.com")
     person(given = "Ying",
            family = "Zheng",
-           role = c("aut", "cre"),
+           role = c("aut"),
            email = "zhy@iastate.edu")
            
            )
