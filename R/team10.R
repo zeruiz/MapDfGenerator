@@ -18,10 +18,14 @@
 "_PACKAGE"
 
 
-
+library
 shpBigToSmall <- function(path,tolerance) {
-  shpbig <- read_sf(path)
-  assert_that(has_extension("gadm36_AUS_1.shp", "shp"), #file path is correct
+  library(tidyverse)
+  library(assertthat)
+  library(sf)
+  library(purrr)
+  shpbig <- sf::read_sf(path)
+  assertthat::assert_that(has_extension("gadm36_AUS_1.shp", "shp"), #file path is correct
               is.numeric(tolerance)
 
               #,noNA(shpbig)
