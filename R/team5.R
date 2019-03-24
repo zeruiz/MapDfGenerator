@@ -1,8 +1,6 @@
 
 
-library(tidyverse)
-library(purrr)
-library(sf)
+
 
 
 Mat2Df <- function(Mat){
@@ -24,6 +22,9 @@ Mat2Df <- function(Mat){
 #' team_5("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
 #'
 team_5 <- function(file, tolerance){
+  library(tidyverse)
+  library(purrr)
+  library(sf)
   # input checking
   checkmate::assertCharacter(file)
   checkmate::assertNumber(tolerance)
