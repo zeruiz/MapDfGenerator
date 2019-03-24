@@ -1,11 +1,4 @@
-#' The team_5 function utilize the map-dataframe-generator form team 5.
-#'
-#' @param file URL of local path to the shape data.
-#' @param tolerance The tolerance value, default is 0.1.
-#' @export
-#' @return a dataframe of longitude, latitude, group, order and addtional information.
-#' @examples
-#' team_5("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
+
 
 library(tidyverse)
 library(purrr)
@@ -21,7 +14,15 @@ Mat2Df <- function(Mat){
   df
 }
 
-
+#' The team_5 function utilize the map-dataframe-generator form team 5.
+#'
+#' @param file URL of local path to the shape data.
+#' @param tolerance The tolerance value, default is 0.1.
+#' @export
+#' @return a dataframe of longitude, latitude, group, order and addtional information.
+#' @examples
+#' team_5("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
+#'
 team_5 <- function(file, tolerance){
   # input checking
   checkmate::assertCharacter(file)
@@ -63,4 +64,4 @@ team_5 <- function(file, tolerance){
 }
 
 
-
+#team_5("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)  %>% ggplot(aes(x = long, y = lat, group = group)) + geom_polygon()
