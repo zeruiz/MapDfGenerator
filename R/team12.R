@@ -43,5 +43,5 @@ team_12 <- function(file, tolerance){
   res <- add_layer(res)
   colnames(res) <- c('long','lat','order','group','geo')
   res <- as.data.frame(res)
-  res
+  list(dataframe = res, name = oz$NAME_0[1])
 }
