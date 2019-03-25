@@ -6,9 +6,7 @@
 #' @import sf
 #' @export
 #' @return A dataframe extracted from a shapefile with group, longitude, latitude and order and additional information.
-#' @examples
-#' file <- system.file("gadm36_AUS_shp", "gadm36_AUS_1.shp", package = "MapDfGenerator")
-#' team_11(file, 0.1)
+
 
 team_11 <- function(file, tolerance = 0.1) {
 

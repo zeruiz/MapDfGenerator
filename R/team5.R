@@ -22,9 +22,7 @@ Mat2Df <- function(Mat){
 #' @import sf
 #' @export
 #' @return a dataframe of longitude, latitude, group, order and addtional information.
-#' @examples
-#' file <- system.file("gadm36_AUS_shp", "gadm36_AUS_1.shp", package = "MapDfGenerator")
-#' team_5(file, 0.1)
+
 
 team_5 <- function(file, tolerance){
   # input checking

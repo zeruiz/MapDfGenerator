@@ -8,9 +8,8 @@
 #' @import dplyr
 #' @export
 #' @return A dataframe, containing polygon and geographic information like longitude, latitude, group and order.
-#' @examples
-#' file <- system.file("gadm36_AUS_shp", "gadm36_AUS_1.shp", package = "MapDfGenerator")
-#' team_12(file, 0.1)
+#' filename <- system.file("extdata", "gadm36_CUB_1.shp", package = "smoothMap")
+#' dat <- team_2(filename, tolerance = 0.01)
 
 
 team_12 <- function(file, tolerance){

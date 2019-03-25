@@ -42,7 +42,7 @@ shpBigToSmall <- function(path,tolerance) {
     mutate(coord = coord %>% map(.f = function(m) as_tibble(m)),
            group = row_number()) %>%
     unnest %>%
-    setNames(c("name", "region","group", "long", "lat"))
+    stats::setNames(c("name", "region","group", "long", "lat"))
   return(shpSmall)
   assert_that(
     is.data.frame(shpSmall),# output is data frame
