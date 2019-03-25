@@ -17,3 +17,7 @@ a data frame consists of the geographic information of the polygons and the addi
 \description{
 geographic information
 }
+\examples{
+filename <- system.file("extdata", "gadm36_AUS_1.shp", package = "MapDfGenerator")
+shpBigToSmall(filename,  0.01)
+}

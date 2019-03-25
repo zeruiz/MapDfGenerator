@@ -1,24 +1,17 @@
-#' @details
-#' Four functions for geographic info
-#' @references input data is available here ""
-#' @keywords internal
-"_PACKAGE"
-
-#' @examples
-#'  shpBigToSmall(".data/gadm36_AUS_1.shp",  0.01)
-
 #' geographic information
 #'
 #' @param path input file path usually as data/...
 #' @param tolerance the amount of which data is getting small
 #' @return a data frame consists of the geographic information of the polygons and the additional information (such as name of the country, name of the territory/state, ...)
-#'
 #' @import tidyverse
 #' @import assertthat
 #' @import sf
 #' @import purrr
-#' @export shpBigToSmall
-
+#' @import tidyr
+#' @export
+#' @examples
+#' filename <- system.file("extdata", "gadm36_AUS_1.shp", package = "MapDfGenerator")
+#' shpBigToSmall(filename,  0.01)
 
 #library
 shpBigToSmall <- function(path,tolerance) {
