@@ -5,7 +5,8 @@
 "_PACKAGE"
 
 #' @examples
-#'  shpBigToSmall(".data/gadm36_AUS_1.shp",  0.01)
+#' filename <- system.file("extdata", "gadm36_AUS_1.shp", package = "MapDfGenerator")
+#' dat <- shpBigtoSmall(filename, tolerance = 0.01)
 
 #' geographic information
 #'
