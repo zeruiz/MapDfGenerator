@@ -26,8 +26,7 @@ The return value is a data frame of the geographic information of the polygons a
 # Install devtools from CRAN
 install.packages("devtools")
 
-# Or the development version from GitHub:
-# install.packages("devtools")
+# install MapDfGenerator
 devtools::install_github("zeruiz/MapDfGenerator")
 ```
 
