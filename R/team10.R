@@ -22,11 +22,11 @@
 #library
 shpBigToSmall <- function(path,tolerance) {
   shpbig <- read_sf(path)
-  assert_that(has_extension("gadm36_AUS_1.shp", "shp"), #file path is correct
-              is.numeric(tolerance)
+#  assert_that(has_extension("gadm36_AUS_1.shp", "shp"), #file path is correct
+#              is.numeric(tolerance)
 
-              #,noNA(shpbig)
-              )
+#              #,noNA(shpbig)
+#              )
 
   shp_st <- maptools::thinnedSpatialPoly(
     as(shpbig, "Spatial"), tolerance = tolerance,
