@@ -7,8 +7,10 @@ context("test-team12")
 # - Function should return a dataframe
 
 test_that("team12 works as expected", {
-  expect_error(team_12(./data/gadm36_AUS_shp/gadm36_AUS_1.shp, 0.1))
-  expect_error(team_12("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", -0.5))
-  expect_error(team_12("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 2))
-  expect_error(team_12("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", num))
+  filename <- system.file("extdata", "gadm36_AUS_1.shp", package = "MapDfGenerator")
+  expect_error(team_12(filename, -0.5))
+  expect_error(team_12(filename, 2))
+  expect_error(team_12(filename, num))
+  dat <- team_12(filename, 0.01)
+  expect_s3_class(dat, "data.frame")
 })

@@ -7,6 +7,7 @@ context("test-team11")
 # - Function should return a dataframe
 
 test_that("team11 works as expected", {
-  expect_error(team_11(./data/gadm36_AUS_shp/gadm36_AUS_1.shp, 0.1))
-  expect_error(team_11("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", IA))
+  filename <- system.file("extdata", "gadm36_AUS_1.shp", package = "MapDfGenerator")
+  expect_error(team_11("gadm36_AUS_1.shp", 0.1))
+  expect_error(team_11(filename, IA))
 })

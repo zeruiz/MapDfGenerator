@@ -17,3 +17,7 @@ a dataframe of longitude, latitude, group, order and addtional information.
 \description{
 The team_5 function utilize the map-dataframe-generator form team 5.
 }
+\examples{
+filename <- system.file("extdata", "gadm36_AUS_1.shp", package = "MapDfGenerator")
+dat <- team_5(filename, tolerance = 0.01)
+}

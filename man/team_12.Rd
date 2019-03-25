@@ -13,9 +13,11 @@ team_12(file, tolerance)
 }
 \value{
 A dataframe, containing polygon and geographic information like longitude, latitude, group and order.
-filename <- system.file("extdata", "gadm36_CUB_1.shp", package = "smoothMap")
-dat <- team_2(filename, tolerance = 0.01)
 }
 \description{
 Extract polygon and geographic information from a shapefile. The main function is built on that from team 12's work from Lab 2
+}
+\examples{
+filename <- system.file("extdata", "gadm36_AUS_1.shp", package = "MapDfGenerator")
+dat <- team_12(filename, tolerance = 0.01)
 }
