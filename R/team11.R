@@ -2,14 +2,15 @@
 #'
 #' @param file Path to your shapefile.
 #' @param tolerance The tolerance value in the metric of the input object, default is 0.1.
+#' @import tidyverse
+#' @import sf
 #' @export
 #' @return A dataframe extracted from a shapefile with group, longitude, latitude and order and additional information.
 #' @examples
-#' team_11("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
+#' file <- system.file("gadm36_AUS_shp", "gadm36_AUS_1.shp", package = "MapDfGenerator")
+#' team_11(file, 0.1)
 
 team_11 <- function(file, tolerance = 0.1) {
-  library(tidyverse)
-  library(sf)
 
   #Check the input type
   checkmate::assertCharacter(file)

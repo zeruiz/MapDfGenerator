@@ -3,15 +3,17 @@
 #' @description Extract polygon and geographic information from a shapefile. The main function is built on that from team 12's work from Lab 2
 #' @param file URL to local path to the shape data.
 #' @param tolerance A number.
+#' @import checkmate
+#' @import tidyverse
+#' @import dplyr
 #' @export
 #' @return A dataframe, containing polygon and geographic information like longitude, latitude, group and order.
 #' @examples
-#' team_12(file="gadm36_AUS_1.shp", 0.1)
+#' file <- system.file("gadm36_AUS_shp", "gadm36_AUS_1.shp", package = "MapDfGenerator")
+#' team_12(file, 0.1)
 
 
 team_12 <- function(file, tolerance){
-  library(tidyverse)
-
   add_order <- function(d){
     l <- nrow(d)
     return(cbind(d,seq(1,l,by=1)))
@@ -33,8 +35,8 @@ team_12 <- function(file, tolerance){
     warning('argument is not numeric or logical: returning NA')
     return(NA)
   }
-  checkmate::assertNumber(tolerance, lower = 0, upper = 1)
-  checkmate::assertCharacter(file)
+  assertNumber(tolerance, lower = 0, upper = 1)
+  assertCharacter(file)
 
   ozbig <- sf::read_sf(file)
   oz_st <- maptools::thinnedSpatialPoly(as(ozbig, "Spatial"), tolerance, minarea = 0.001, topologyPreserve = TRUE)
@@ -50,5 +52,5 @@ team_12 <- function(file, tolerance){
   cbind(dat, res) -> dat
   return(dat)
 
-  checkmate::checkDataFrame(dat)
+  checkDataFrame(dat)
 }

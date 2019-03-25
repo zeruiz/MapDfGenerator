@@ -30,8 +30,11 @@ Suggests:
 RoxygenNote: 6.1.1
 Imports: 
     sf,
+    assertthat,
     purrr,
     dplyr,
+    stats,
+    methods,
     checkmate,
     maptools,
     tidyverse

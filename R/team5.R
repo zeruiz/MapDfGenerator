@@ -7,7 +7,7 @@ Mat2Df <- function(Mat){
   long <- Mat[,1]
   lat <- Mat[,2]
   order <- 1:nrow(Mat)
-  group <- rep(rnorm(1),nrow(Mat))
+  group <- rep(stats::rnorm(1),nrow(Mat))
   df <- data.frame(long=long,lat=lat,group=group,order=order)
   df
 }
@@ -16,15 +16,17 @@ Mat2Df <- function(Mat){
 #'
 #' @param file URL of local path to the shape data.
 #' @param tolerance The tolerance value, default is 0.1.
+#' @import methods
+#' @import tidyverse
+#' @import purrr
+#' @import sf
 #' @export
 #' @return a dataframe of longitude, latitude, group, order and addtional information.
 #' @examples
-#' team_5("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
-#'
+#' file <- system.file("gadm36_AUS_shp", "gadm36_AUS_1.shp", package = "MapDfGenerator")
+#' team_5(file, 0.1)
+
 team_5 <- function(file, tolerance){
-  library(tidyverse)
-  library(purrr)
-  library(sf)
   # input checking
   checkmate::assertCharacter(file)
   checkmate::assertNumber(tolerance)

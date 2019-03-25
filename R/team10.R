@@ -11,20 +11,18 @@
 #' @param path input file path usually as data/...
 #' @param tolerance the amount of which data is getting small
 #' @return a data frame consists of the geographic information of the polygons and the additional information (such as name of the country, name of the territory/state, ...)
-
+#'
+#' @import tidyverse
+#' @import assertthat
+#' @import sf
+#' @import purrr
 #' @export
-#' @examples
-#' shpBigToSmall("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
 
 
 #library
 shpBigToSmall <- function(path,tolerance) {
-  library(tidyverse)
-  library(assertthat)
-  library(sf)
-  library(purrr)
-  shpbig <- sf::read_sf(path)
-  assertthat::assert_that(has_extension("gadm36_AUS_1.shp", "shp"), #file path is correct
+  shpbig <- read_sf(path)
+  assert_that(has_extension("gadm36_AUS_1.shp", "shp"), #file path is correct
               is.numeric(tolerance)
 
               #,noNA(shpbig)

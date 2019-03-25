@@ -17,6 +17,3 @@ a data frame consists of the geographic information of the polygons and the addi
 \description{
 geographic information
 }
-\examples{
-shpBigToSmall("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
-}

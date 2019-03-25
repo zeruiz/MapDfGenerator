@@ -18,5 +18,6 @@ A dataframe extracted from a shapefile with group, longitude, latitude and order
 This function extracts a data from a shapefile with 2 levels in spf$geometry, and include the other information.
 }
 \examples{
-team_11("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
+file <- system.file("gadm36_AUS_shp", "gadm36_AUS_1.shp", package = "MapDfGenerator")
+team_11(file, 0.1)
 }

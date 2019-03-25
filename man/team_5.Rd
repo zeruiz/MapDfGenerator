@@ -18,6 +18,6 @@ a dataframe of longitude, latitude, group, order and addtional information.
 The team_5 function utilize the map-dataframe-generator form team 5.
 }
 \examples{
-team_5("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
-
+file <- system.file("gadm36_AUS_shp", "gadm36_AUS_1.shp", package = "MapDfGenerator")
+team_5(file, 0.1)
 }

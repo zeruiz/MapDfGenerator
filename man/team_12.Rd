@@ -18,5 +18,6 @@ A dataframe, containing polygon and geographic information like longitude, latit
 Extract polygon and geographic information from a shapefile. The main function is built on that from team 12's work from Lab 2
 }
 \examples{
-team_12(file="gadm36_AUS_1.shp", 0.1)
+file <- system.file("gadm36_AUS_shp", "gadm36_AUS_1.shp", package = "MapDfGenerator")
+team_12(file, 0.1)
 }
