@@ -4,7 +4,8 @@
 #' @keywords internal
 "_PACKAGE"
 
-
+#' @examples
+#'  shpBigToSmall(".data/gadm36_AUS_1.shp",  0.01)
 
 #' geographic information
 #'
@@ -16,7 +17,7 @@
 #' @import assertthat
 #' @import sf
 #' @import purrr
-#' @export
+#' @export shpBigToSmall
 
 
 #library
