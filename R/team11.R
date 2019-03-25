@@ -6,7 +6,9 @@
 #' @import sf
 #' @export
 #' @return A dataframe extracted from a shapefile with group, longitude, latitude and order and additional information.
-
+#' @examples
+#' filename <- system.file("extdata", "gadm36_AUS_1.shp", package = "MapDfGenerator")
+#' dat <- team_11(filename, tolerance = 0.01)
 
 team_11 <- function(file, tolerance = 0.1) {
 
@@ -16,8 +18,8 @@ team_11 <- function(file, tolerance = 0.1) {
 
   #Get data
   ozbig <- read_sf(file)
-  AbsPath <- file.path(getwd(), file)
-  assertthat::assert_that(file.exists(AbsPath), msg = "File does not exist!")
+#  AbsPath <- file.path(getwd(), file)
+#  assertthat::assert_that(file.exists(AbsPath), msg = "File does not exist!")
   oz_st <- maptools::thinnedSpatialPoly(as(ozbig, "Spatial"), tolerance, minarea = 0.001, topologyPreserve = TRUE)
   oz <- st_as_sf(oz_st)
 
