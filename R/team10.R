@@ -15,6 +15,7 @@
 #' @return a data frame consists of the geographic information of the polygons and the additional information (such as name of the country, name of the territory/state, ...)
 #'
 #' @import tidyverse
+#' @import tidyr
 #' @import assertthat
 #' @import sf
 #' @import purrr

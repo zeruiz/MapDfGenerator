@@ -33,6 +33,7 @@ Imports:
     assertthat,
     purrr,
     dplyr,
+    tidyr,
     stats,
     methods,
     checkmate,
