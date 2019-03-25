@@ -11,11 +11,6 @@ The return value is a data frame of the geographic information of the polygons a
 
 ## Authors
 
-- Atousa Zarindast: team10: 
-- Yudi Zhang: team11 
-- Zerui Zhang:
-- Ying Zheng: 
- We pick the functions from team 11, 12 and 5, 
 
 | Author | team choosed from last lab | function name |
 | ------ | ------ | ------ |
