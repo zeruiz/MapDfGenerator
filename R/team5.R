@@ -30,8 +30,6 @@ team_5 <- function(file, tolerance){
   # input checking
   checkmate::assertCharacter(file)
   checkmate::assertNumber(tolerance)
-  AbsPath <- file.path(getwd(), file)
-  assertthat::assert_that(file.exists(AbsPath), msg = "File does not exist!")
 
   # data preparation
   ozbig <- read_sf(file)
