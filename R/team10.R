@@ -1,3 +1,9 @@
+#' @details
+#' Four functions for geographic info
+#' @references input data is available here ""
+#' @keywords internal
+"_PACKAGE"
+
 
 
 #' geographic information
@@ -11,14 +17,7 @@
 #' shpBigToSmall("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
 
 
-#' @details
-#' Three functions for geographic info
-#' @references input data is available here ""
-#' @keywords internal
-"_PACKAGE"
-
-
-library
+#library
 shpBigToSmall <- function(path,tolerance) {
   library(tidyverse)
   library(assertthat)
