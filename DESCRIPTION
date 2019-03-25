@@ -34,6 +34,7 @@ Imports:
     purrr,
     tidyr,
     dplyr,
+    tidyr,
     stats,
     methods,
     checkmate,
