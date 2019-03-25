@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-=======
-#' @details
-#' Four functions for geographic info
-#' @references input data is available here ""
-#' @keywords internal
-"_PACKAGE"
-
-#' @examples
-#' filename <- system.file("extdata", "gadm36_AUS_1.shp", package = "MapDfGenerator")
-#' dat <- shpBigtoSmall(filename, tolerance = 0.01)
-
->>>>>>> 7b40973b7df56e053a038639ebdb81ff2b354308
 #' geographic information
 #'
 #' @param path input file path usually as data/...
