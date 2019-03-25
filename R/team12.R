@@ -6,7 +6,7 @@
 #' @export
 #' @return A dataframe, containing polygon and geographic information like longitude, latitude, group and order.
 #' @examples
-#' team_12("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
+#' team_12(file="gadm36_AUS_1.shp", 0.1)
 
 
 team_12 <- function(file, tolerance){

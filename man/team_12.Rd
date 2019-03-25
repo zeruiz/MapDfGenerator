@@ -2,7 +2,7 @@
 % Please edit documentation in R/team12.R
 \name{team_12}
 \alias{team_12}
-\title{Map dataframe generator form Team 12.}
+\title{This function helps get the polygon and geographic information from a shapefile.}
 \usage{
 team_12(file, tolerance)
 }
@@ -12,11 +12,11 @@ team_12(file, tolerance)
 \item{tolerance}{A number.}
 }
 \value{
-The dataframe of longitude, latitude, group and order.
+A dataframe, containing polygon and geographic information like longitude, latitude, group and order.
 }
 \description{
-Map dataframe generator form Team 12.
+Extract polygon and geographic information from a shapefile. The main function is built on that from team 12's work from Lab 2
 }
 \examples{
-team_12("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
+team_12(file="gadm36_AUS_1.shp", 0.1)
 }
