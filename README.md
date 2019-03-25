@@ -34,10 +34,11 @@ devtools::install_github("zeruiz/MapDfGenerator")
 
 ```
 library(MapDfGenerator)
-team11_result <-team_11("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
-team5_result <-team_5("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
-team12_result <-team_12("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
-team10_result <-shpBigToSmall("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1) 
+filename <- system.file("extdata", "gadm36_AUS_1.shp", package = "MapDfGenerator")  # Use the default data. Or your own URL.
+team11_result <-team_11(filename, 0.1)
+team5_result <-team_5(filename, 0.1)
+team12_result <-team_12(filename, 0.1)
+team10_result <-shpBigToSmall(filename, 0.1) 
 ```
 
 
