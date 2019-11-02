@@ -1,4 +1,4 @@
-# MapDfGenerator
+# MapDfGenerator-Wrapping the world in a package
 
 
 MapDfGenerator is a package that wrap 4 solutions to last time's lab.
